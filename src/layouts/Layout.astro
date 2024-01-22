@@ -6,7 +6,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="mx-auto ">
+<html lang="en" class="">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,11 +23,28 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="mx-3 flex flex-col min-h-screen bg-gradient-to-b from-slate-800 to-emerald-900 text-stone-200">
+	<body class="flex flex-col min-h-screen bg-gradient-to-b from-slate-800 to-emerald-900 text-stone-200">
 		<slot />
-		<footer class="text-center mx-auto flex flex-col  md:items-center md:justify-between md:p-6 mt-auto mb-5">
-			<p class="text-lg">Jouni Lammi 2024. <a href="https://jolammi.me" class="hover:opacity-70 underline">jolammi.me</a> </p>
-			<p class="text-lg">Tehty Astrolla ja Tailwindillä, Shipattu Netlifyllä.</p>
+		<footer class="text-center mx-0 flex flex-col border-t-[1px] mt-auto md:items-center md:justify-between md:p-6 ">
+			<p class="text-lg mt-2">
+				By Jouni Lammi, 2024. Visit
+				<a href="https://jolammi.me" class="hover:opacity-70 text-amber-200">
+					jolammi.me
+				</a>
+			</p>
+			<p class="text-lg mb-2">
+				Built using
+				<a href="https://astro.build" class="hover:opacity-70 text-amber-200">
+					Astro
+				</a>
+				and
+				<a href="https://tailwindcss.com" class="hover:opacity-70 text-amber-200">
+					TailwindCSS
+				</a>
+				, Deployed with
+				<a href="https://netlify.com" class="hover:opacity-70 text-amber-200">
+					Netlify
+				</a></p>
 		</footer>
 	</body>
 </html>
